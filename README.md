@@ -4,4 +4,4 @@ This is the back end of the [async weather app](https://github.com/miltdeherrera
 
 Uses:
 * Express.js
-* Handlebars# weather-app-backend
+* Handlebars
