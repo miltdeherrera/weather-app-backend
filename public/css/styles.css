@@ -53,3 +53,22 @@ button {
   cursor: pointer;
   padding: 8px;
 }
+
+.forecast-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+#weather-icon {
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+#message-1 {
+
+}
+
+#message-2 {
+  
+}
