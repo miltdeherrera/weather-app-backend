@@ -35,7 +35,7 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
   res.render('help', {
-    helpMessage: 'Enter in a partial or complete address to find out what the current and apparent weather conditions there.',
+    helpMessage: 'Enter in a partial or complete address to find out what the current and apparent weather conditions are there.',
     title: 'Help page',
   })
 })
