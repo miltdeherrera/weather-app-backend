@@ -24,22 +24,19 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
   res.render('index', {
     title: 'Weather App',
-    name: 'Milt D'
   })
 })
 
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About me',
-    name: 'Milt D'
   })
 })
 
 app.get('/help', (req, res) => {
   res.render('help', {
-    helpMessage: ' Here\'s where the help articles live',
+    helpMessage: 'Enter in a partial or complete address to find out what the current and apparent weather conditions there.',
     title: 'Help page',
-    name: 'Milt D'
   })
 })
 
