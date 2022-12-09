@@ -12,9 +12,9 @@ const forecast = (latitude, longitude, callback) => {
     } else if (success === false) {
       callback('No search results found')
     } else {
-      const { temperature, feelslike, weather_descriptions } = currentInfo
+      const { temperature, feelslike, weather_descriptions, weather_icons } = currentInfo
 
-      callback(undefined, `${weather_descriptions}: It is currently ${temperature} degrees out. \nIt feels like ${feelslike} degrees out.`)
+      callback(undefined, `${weather_descriptions}: It is currently ${temperature} degrees out. \nIt feels like ${feelslike} degrees out.`, weather_icons)
     }
   })
 }

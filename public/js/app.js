@@ -1,10 +1,8 @@
-// Client-side version of search script
-console.log('client side javascript file is loaded')
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
+const weatherIcon = document.querySelector('#weather-icon')
 
 weatherForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -13,6 +11,7 @@ weatherForm.addEventListener('submit', (e) => {
 
   messageOne.textContent = 'Loading...'
   messageTwo.textContent = ''
+  weatherIcon.src = ''
   
   fetch('/weather?address=' + location).then((response) => {
     response.json().then((data) => {
@@ -22,6 +21,7 @@ weatherForm.addEventListener('submit', (e) => {
       } else {
         messageOne.textContent = data.location
         messageTwo.textContent = data.forecast
+        weatherIcon.src = data.weather_icons
       }
     })
   })
